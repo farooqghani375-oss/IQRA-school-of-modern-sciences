@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IQRA School of modern sciences</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <!-- Netlify Identity Widget — needed for Admin login -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <!-- نور العلم -->
+     <img src="images/logo.jpeg">
+    <span>IQRA School of modern sciences</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#classes">Classes</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#admissions">Admissions</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="arabic-bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+    <h1><em>IQRA School of modern </em> sciences</h1>
+    <p class="hero-sub">Where Faith Meets Knowledge</p>
+    <p class="hero-desc">A nurturing school where children grow in Quranic learning and scientific discovery — from Playgroup to Class 7, building hearts and minds for this world and the Hereafter.</p>
+    <div class="hero-btns">
+      <a href="#admissions" class="btn-primary">Admission Detail</a>
+      <a href="#programs" class="btn-ghost">Explore Programs</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">7+</span>
+        <span class="stat-label">HIFZ Completion</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Quranic Tracks</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">350+</span>
+        <span class="stat-label">Students</span>
+      </div>
+    </div>
+
+    <!-- SOCIAL ICONS — bottom of hero (rendered dynamically by script.js from /api/content-social-links) -->
+    <div class="hero-socials">
+      <span class="hero-socials-label">Follow Us</span>
+      <div class="hero-socials-icons" id="heroSocialIcons"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STICKY WHATSAPP BUTTON (href filled in by script.js from the WhatsApp social link) -->
+<a href="https://wa.me/923325216881" target="_blank" class="sticky-whatsapp" id="stickyWhatsapp" title="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="sticky-wa-pulse"></span>
+</a>
+
+<!-- PROGRAMS -->
+<section class="programs" id="programs">
+  <p class="section-label">What We Offer</p>
+  <div class="divider"></div>
+  <h2 class="section-title">Our <span>Programs</span></h2>
+  <p class="section-desc">Two pillars of education — Deen and Dunya — offered together under one roof, ensuring a holistic upbringing for every student.</p>
+
+  <div class="programs-grid">
+    <!-- Islamic Education -->
+    <div class="prog-card islamic">
+      <span class="prog-icon">🕌</span>
+      <span class="prog-tag">Islamic Education</span>
+      <h3>Hifz ul Quran</h3>
+      <p>A structured Hifz program for students who wish to memorize the Holy Quran under the guidance of qualified Huffaz with Sanad.</p>
+      <ul class="prog-features">
+        <li>Personalized memorization plan</li>
+        <li>Daily revision sessions</li>
+        <li>Tajweed integrated from day one</li>
+        <li>Progress tracked by parents</li>
+      </ul>
+    </div>
+
+    <div class="prog-card islamic">
+      <span class="prog-icon">📖</span>
+      <span class="prog-tag">Islamic Education</span>
+      <h3>Tajweed ul Quran</h3>
+      <p>Master the rules of Tajweed to recite the Holy Quran with correct pronunciation, rhythm, and beautification as revealed.</p>
+      <ul class="prog-features">
+        <li>Makharij & Sifaat taught in detail</li>
+        <li>Audio-visual teaching aids</li>
+        <li>Certification upon completion</li>
+        <li>Suitable for all ages</li>
+      </ul>
+    </div>
+
+    <div class="prog-card islamic">
+      <span class="prog-icon">✨</span>
+      <span class="prog-tag">Islamic Education</span>
+      <h3>Nazra e Quran</h3>
+      <p>Learn to read the Quran from scratch with Qaida, progressing to fluent Nazra reading. Perfect for beginners and young learners.</p>
+      <ul class="prog-features">
+        <li>Noorani Qaida for beginners</li>
+        <li>Individual attention guaranteed</li>
+        <li>Short Surahs memorization</li>
+        <li>Islamic manners & duas included</li>
+      </ul>
+    </div>
+
+    <!-- Science Education -->
+    <div class="prog-card science">
+      <span class="prog-icon">🔬</span>
+      <span class="prog-tag">Science & General</span>
+      <h3>Science Education</h3>
+      <p>Modern curriculum aligned with national standards, taught through interactive methods to spark curiosity and critical thinking.</p>
+      <ul class="prog-features">
+        <li>Mathematics & English</li>
+        <li>General Science & Urdu</li>
+        <li>Social Studies & Islamiat</li>
+        <li>Computer basics (Grade 3+)</li>
+      </ul>
+    </div>
+
+    <div class="prog-card science">
+      <span class="prog-icon">🎨</span>
+      <span class="prog-tag">Early Years</span>
+      <h3>Early Childhood</h3>
+      <p>Playgroup and Nursery programs built on play-based learning, developing language, motor skills, and Islamic values from the very start.</p>
+      <ul class="prog-features">
+        <li>Montessori-inspired activities</li>
+        <li>Arabic alphabet introduction</li>
+        <li>Duas & basic Kalimas</li>
+        <li>Art, craft & storytelling</li>
+      </ul>
+    </div>
+
+    <div class="prog-card science">
+      <span class="prog-icon">🏆</span>
+      <span class="prog-tag">Co-curricular</span>
+      <h3>Extra Activities</h3>
+      <p>Beyond the classroom — a range of enriching activities that build character, teamwork, creativity, and leadership in young Muslims.</p>
+      <ul class="prog-features">
+        <li>Naat & Qiraat competitions</li>
+        <li>Science exhibitions</li>
+        <li>Sports & physical education</li>
+        <li>Annual Quran Khwani</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+ <!-- GALLERY -->
+
+ 
+<!-- GALLERY SECTION -->
+<section class="gallery-section" id="gallery">
+  <p class="section-label">Our Memories</p>
+  <div class="divider"></div>
+  <h2 class="section-title">School <span>Gallery</span></h2>
+  <p class="section-desc">Glimpses of life at IQRA — celebrations, achievements, and everyday moments that make our school special.</p>
+
+  <!-- Groups + folder cards are rendered dynamically by script.js from /api/gallery
+       (falls back to a bundled copy of the same data if the API isn't reachable) -->
+  <div id="galleryGroups"></div>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="gallery-lightbox" id="galleryLightbox">
+    <div class="lightbox-overlay" onclick="closeGalleryModal()"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <button class="lightbox-back" onclick="closeGalleryModal()">← Back to Gallery</button>
+        <h3 class="lightbox-title" id="lightboxTitle">Category</h3>
+        <span class="lightbox-close" onclick="closeGalleryModal()">✕</span>
+      </div>
+
+      <!-- PHOTOS / VIDEOS TAB NAV -->
+      <div class="media-tabs" id="mediaTabs">
+        <button class="media-tab active" id="tabPhotos" onclick="switchTab('photos')">
+          <span>🖼️</span> Photos <span class="tab-count" id="photoCount">0</span>
+        </button>
+        <button class="media-tab" id="tabVideos" onclick="switchTab('videos')">
+          <span>🎬</span> Videos <span class="tab-count" id="videoCount">0</span>
+        </button>
+      </div>
+
+      <div class="lightbox-grid" id="lightboxGrid">
+        <!-- media injected here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL IMAGE VIEWER -->
+  <div class="img-viewer" id="imgViewer">
+    <div class="img-viewer-overlay" onclick="closeImgViewer()"></div>
+    <button class="img-nav img-prev" onclick="shiftImage(-1)">&#8592;</button>
+    <div class="img-viewer-content">
+      <img id="viewerImg" src="" alt="">
+      <div class="img-viewer-caption" id="viewerCaption"></div>
+    </div>
+    <button class="img-nav img-next" onclick="shiftImage(1)">&#8594;</button>
+    <button class="img-viewer-close" onclick="closeImgViewer()">✕</button>
+  </div>
+
+</section>
+
+
+
+
+<!-- CLASSES -->
+<section class="classes-section" id="classes">
+  <p class="section-label">Age Groups</p>
+  <div class="divider"></div>
+  <h2 class="section-title">Classes from <span>Playgroup to Grade 7</span></h2>
+  <p class="section-desc">Every child finds their place here. We welcome students at every stage of early education.</p>
+
+  <div class="classes-grid">
+    <div class="class-pill">
+      <div class="class-emoji">🌱</div>
+      <div class="class-name">Playgroup</div>
+      <div class="class-age">Age 3–4</div>
+    </div>
+    <div class="class-pill">
+      <div class="class-emoji">🌸</div>
+      <div class="class-name">Nursery</div>
+      <div class="class-age">Age 4–5</div>
+    </div>
+    <div class="class-pill">
+      <div class="class-emoji">🌻</div>
+      <div class="class-name">Prep / KG</div>
+      <div class="class-age">Age 5–6</div>
+    </div>
+    <div class="class-pill">
+      <div class="class-emoji">⭐</div>
+      <div class="class-name">Grade 1</div>
+      <div class="class-age">Age 6–7</div>
+    </div>
+    <div class="class-pill">
+      <div class="class-emoji">📚</div>
+      <div class="class-name">Grade 2</div>
+      <div class="class-age">Age 7–8</div>
+    </div>
+    <div class="class-pill">
+      <div class="class-emoji">🔢</div>
+      <div class="class-name">Grade 3</div>
+      <div class="class-age">Age 8–9</div>
+    </div>
+    <div class="class-pill">
+      <div class="class-emoji">🔭</div>
+      <div class="class-name">Grade 4</div>
+      <div class="class-age">Age 9–10</div>
+    </div>
+    <div class="class-pill">
+      <div class="class-emoji">🧪</div>
+      <div class="class-name">Grade 5</div>
+      <div class="class-age">Age 10–11</div>
+    </div>
+    <div class="class-pill">
+      <div class="class-emoji">🌍</div>
+      <div class="class-name">Grade 6</div>
+      <div class="class-age">Age 11–12</div>
+    </div>
+    <div class="class-pill">
+      <div class="class-emoji">🎓</div>
+      <div class="class-name">Grade 7</div>
+      <div class="class-age">Age 12–13</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <p class="section-label">Our Difference</p>
+  <div class="divider"></div>
+  <h2 class="section-title">Why Choose <span>IQRA School of modern sciences</span>?</h2>
+  <p class="section-desc">We combine the best of Islamic tradition with modern teaching methods in a safe, loving environment.</p>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🕌</div>
+      <h4>Qualified Islamic Teachers</h4>
+      <p>Quran teachers are certified Huffaz with proper Sanad and years of experience in Hifz and Tajweed instruction.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">💚</div>
+      <h4>Safe & Nurturing Environment</h4>
+      <p>A disciplined yet compassionate atmosphere where every child feels respected, safe, and motivated to learn.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">📊</div>
+      <h4>Regular Parent Updates</h4>
+      <p>Parents are kept informed through monthly progress reports, parent-teacher meetings, and daily communication.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">💰</div>
+      <h4>Affordable Fees</h4>
+      <p>Quality education should be accessible. We offer competitive fee structures with sibling discounts available.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSIONS -->
+<section class="admissions" id="admissions">
+  <p class="section-label">Join Our Family</p>
+  <div class="divider"></div>
+  <h2 class="section-title">Admissions <span>Open</span></h2>
+  <p class="section-desc" id="admissionsIntro">Enrolling now for the new academic year. Seats are limited — secure your child's place today.</p>
+
+  <!-- Rendered dynamically by script.js from /api/content-admissions -->
+  <div class="admission-steps" id="admissionSteps"></div>
+
+  <a href="#contact" class="btn-primary" style="position:relative;z-index:1;">Start Enrollment →</a>
+</section>
+
+<!-- CONTACT -->
+<!-- CONTACT INFO -->
+<section class="contact" id="contact">
+  <p class="section-label">Contact Us</p>
+  <div class="divider"></div>
+  <h2 class="section-title">Get in <span>Touch</span></h2>
+  <p class="section-desc">We would love to welcome you to our campus. Visit us or contact us directly.</p>
+
+  <div class="contact-info-wrapper">
+
+    <div class="contact-card">
+      <div class="contact-icon">📍</div>
+      <h4>School Location</h4>
+      <p>Muhalla Mehboob taikadar, Tarnab Farm, Peshawar, Pakistan</p>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-icon">📞</div>
+      <h4>Phone Number</h4>
+      <p>+92 332 5216881</p>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <h4>Email Address</h4>
+      <p>janismsians@gmail.com</p>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-icon">📜</div>
+      <h4>Registration No.</h4>
+      <p>PSRA-PSH-00031067-19</p>
+    </div>
+
+  </div>
+
+  <!-- GOOGLE MAP -->
+  <div class="map-wrapper">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1653.788618201972!2d71.6981616726283!3d34.003391222217594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1777634653528!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      loading="lazy">
+    </iframe>
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">اقرا سکول آف ماڈرن سائنسز</div>
+  <p>IQRA school of modern sciences | Playgroup to Grade 7</p>
+  <p style="margin-top:0.5rem;">
+    📞 Contact Us &nbsp;|&nbsp; 🕌 <a href="#programs">Programs</a> &nbsp;|&nbsp; 📋 <a href="#admissions">Admissions</a>
+  </p>
+  <p style="margin-top:1rem; font-size:0.78rem; opacity:1; color: #f0c060;">
+    "اقرأ باسم ربك الذي خلق" — Read in the name of your Lord who created (96:1)
+  </p>
+</footer>
+
+
+<div class="gallery-modal" id="galleryModal">
+  <span class="close-btn" onclick="closeGallery()">×</span>
+  <div class="modal-content" id="modalContent"></div>
+</div>
+
+<script src="script.js"></script>
+
+<!-- Netlify Identity: redirect to admin after login -->
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

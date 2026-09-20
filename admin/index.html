@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IQRA School — Admin Panel</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div id="loginScreen" class="login-screen">
+  <form id="loginForm" class="login-card">
+    <img src="../images/logo.jpeg" alt="IQRA School" class="login-logo">
+    <h1>Admin Login</h1>
+    <p class="login-sub">IQRA School of Modern Sciences</p>
+    <label>Username
+      <input type="text" id="loginUsername" autocomplete="username" required>
+    </label>
+    <label>Password
+      <input type="password" id="loginPassword" autocomplete="current-password" required>
+    </label>
+    <div class="msg" id="loginMsg"></div>
+    <button type="submit" class="btn-primary" id="loginBtn">Log In</button>
+  </form>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="dashboard hidden">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <img src="../images/logo.jpeg" alt="logo">
+      <span>IQRA Admin</span>
+    </div>
+    <nav class="sidebar-nav">
+      <button class="nav-item active" data-tab="gallery">🖼️ Gallery Media</button>
+      <button class="nav-item" data-tab="admissions">📋 Admissions</button>
+      <button class="nav-item" data-tab="social">🔗 Social Links</button>
+      <button class="nav-item" data-tab="account">🔐 Account Settings</button>
+    </nav>
+    <div class="sidebar-footer">
+      <span id="whoami"></span>
+      <button id="logoutBtn" class="btn-ghost-small">Log Out</button>
+    </div>
+  </aside>
+
+  <main class="content">
+
+    <!-- GALLERY TAB -->
+    <section id="tab-gallery" class="tab-panel">
+      <h2>Gallery — Photos & Videos</h2>
+      <p class="hint">Upload photos and videos into a category. Categories group into the site's Events / Academic / Campus rows.</p>
+
+      <div class="card">
+        <h3>Add New Category</h3>
+        <form id="newCategoryForm" class="inline-form">
+          <input type="text" id="catTitle" placeholder="e.g. Science Day 2027" required>
+          <input type="text" id="catEmoji" placeholder="Emoji e.g. 🔬" maxlength="4" style="max-width:90px">
+          <select id="catGroup">
+            <option value="events">Events</option>
+            <option value="academic">Academic</option>
+            <option value="campus">Campus Life</option>
+            <option value="other">Other</option>
+          </select>
+          <button type="submit" class="btn-primary">+ Add Category</button>
+        </form>
+      </div>
+
+      <div id="categoryList"></div>
+    </section>
+
+    <!-- ADMISSIONS TAB -->
+    <section id="tab-admissions" class="tab-panel hidden">
+      <h2>Admission Details</h2>
+      <p class="hint">This content is shown live on the public Admissions section of the website.</p>
+      <div class="card">
+        <label>Intro text
+          <textarea id="admIntro" rows="2"></textarea>
+        </label>
+        <h3 style="margin-top:1.2rem;">Steps</h3>
+        <div id="admStepsList"></div>
+        <button type="button" id="addStepBtn" class="btn-ghost-small">+ Add Step</button>
+        <div class="msg" id="admMsg"></div>
+        <button type="button" id="saveAdmissionsBtn" class="btn-primary" style="margin-top:1rem;">Save Admissions</button>
+      </div>
+    </section>
+
+    <!-- SOCIAL LINKS TAB -->
+    <section id="tab-social" class="tab-panel hidden">
+      <h2>Social Links</h2>
+      <p class="hint">These appear as icons in the site header and footer.</p>
+
+      <div class="card">
+        <h3>Add Social Link</h3>
+        <form id="newSocialForm" class="inline-form">
+          <input type="text" id="socLabel" placeholder="Label e.g. YouTube" required>
+          <input type="url" id="socUrl" placeholder="https://..." required>
+          <select id="socIcon">
+            <option value="whatsapp">WhatsApp</option>
+            <option value="facebook">Facebook</option>
+            <option value="instagram">Instagram</option>
+            <option value="tiktok">TikTok</option>
+            <option value="youtube">YouTube</option>
+            <option value="twitter">X / Twitter</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="snapchat">Snapchat</option>
+            <option value="telegram">Telegram</option>
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="website">Website</option>
+            <option value="custom">Custom Icon (upload image)</option>
+          </select>
+          <input type="file" id="socCustomIconFile" accept="image/*" class="hidden">
+          <button type="submit" class="btn-primary">+ Add Link</button>
+        </form>
+        <div class="msg" id="socMsg"></div>
+      </div>
+
+      <div id="socialList"></div>
+    </section>
+
+    <!-- ACCOUNT TAB -->
+    <section id="tab-account" class="tab-panel hidden">
+      <h2>Account Settings</h2>
+      <p class="hint">Change the username and/or password used to log into this admin panel.</p>
+      <div class="card" style="max-width:480px;">
+        <form id="accountForm">
+          <label>Current Password
+            <input type="password" id="accCurrentPassword" autocomplete="current-password" required>
+          </label>
+          <label>New Username (optional)
+            <input type="text" id="accNewUsername" autocomplete="username">
+          </label>
+          <label>New Password (optional, min 8 characters)
+            <input type="password" id="accNewPassword" autocomplete="new-password">
+          </label>
+          <label>Confirm New Password
+            <input type="password" id="accConfirmPassword" autocomplete="new-password">
+          </label>
+          <div class="msg" id="accMsg"></div>
+          <button type="submit" class="btn-primary" style="margin-top:0.6rem;">Save Changes</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
