@@ -1,6 +1,17 @@
 const { requireAdmin, json } = require('./_lib/auth');
 const { getGallery, saveGallery } = require('./_lib/contentStore');
 
+// Cloudinary can generate a JPG thumbnail from any frame of a hosted video
+// just by swapping the file extension on its /video/upload/ URL - no extra
+// upload or transformation needed. Only applies to videos actually hosted on
+// Cloudinary (i.e. uploaded through this admin panel), not local file paths.
+function deriveVideoThumb(src) {
+  if (typeof src !== 'string') return undefined;
+  const match = src.match(/^(https?:\/\/res\.cloudinary\.com\/[^/]+\/video\/upload\/.+)\.[a-zA-Z0-9]+$/);
+  if (!match) return undefined;
+  return `${match[1]}.jpg`;
+}
+
 exports.handler = async (event) => {
   const session = requireAdmin(event);
   if (!session) return json(401, { error: 'Not authenticated' });
@@ -25,6 +36,10 @@ exports.handler = async (event) => {
     if (!category) return json(404, { error: 'Category not found' });
 
     const item = { src: String(src), caption: String(caption || category.title).slice(0, 200) };
+    if (type === 'video') {
+      const thumb = deriveVideoThumb(item.src);
+      if (thumb) item.thumb = thumb;
+    }
     if (type === 'photo') category.photos.push(item);
     else category.videos.push(item);
 
