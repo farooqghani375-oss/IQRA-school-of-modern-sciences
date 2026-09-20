@@ -1,8 +1,8 @@
-const { getStore } = require('@netlify/blobs');
+const { openStore } = require('./blobs');
 const { DEFAULT_GALLERY, DEFAULT_ADMISSIONS, DEFAULT_SOCIAL_LINKS } = require('./defaults');
 
 function store() {
-  return getStore('site-content');
+  return openStore('site-content');
 }
 
 async function getOrSeed(key, defaultValue) {

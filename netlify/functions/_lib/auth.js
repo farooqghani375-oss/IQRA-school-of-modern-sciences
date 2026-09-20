@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const cookie = require('cookie');
 const bcrypt = require('bcryptjs');
-const { getStore } = require('@netlify/blobs');
+const { openStore } = require('./blobs');
 
 const COOKIE_NAME = 'iqra_admin_session';
 const SESSION_HOURS = 12;
@@ -14,7 +14,7 @@ function getSecret() {
 }
 
 function credentialsStore() {
-  return getStore('admin-credentials');
+  return openStore('admin-credentials');
 }
 
 // Ensure an admin account exists. Seeds one on first run from env vars
